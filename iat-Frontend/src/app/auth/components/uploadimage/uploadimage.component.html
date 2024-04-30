@@ -1,0 +1,38 @@
+<div class="container h-100">
+  <div class="row justify-content-sm-center h-100">
+    <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+      <div class="card shadow-lg">
+        <div class="card-body p-5">
+          <h1 class="fs-4 card-title fw-bold mb-4">Update profile image</h1>
+          <div class="row">
+            <div class="col-8">
+              <label class="btn btn-default p-0">
+                <input type="file" accept="image/*" multiple (change)="selectFiles($event)" />
+              </label>
+            </div>
+
+            <div class="col-4">
+              <button
+                class="btn btn-success btn-sm"
+                [disabled]="!selectedFiles"
+                (click)="uploadFiles()"
+              >
+                Upload
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <img style="width: 200px; height: 200px;" *ngFor='let preview of previews' [src]="preview" class="preview">
+          </div>
+
+          <div *ngIf="message.length" class="alert alert-secondary my-3" role="alert">
+            <ul *ngFor="let msg of message; let i = index">
+              <li>{{ msg }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

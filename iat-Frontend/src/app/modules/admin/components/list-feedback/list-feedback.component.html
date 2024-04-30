@@ -1,0 +1,42 @@
+
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+
+        <table class="table table-striped table-bordered table-hover">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Answer 1</th>
+            <th scope="col">Answer 2</th>
+            <th scope="col">Answer 3</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Delete</th>
+            
+        
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let f of feedbacks">
+            <th scope="row">{{ f.id }}</th>
+            <td>{{ f.user.username }}</td>
+            <td>{{ f.answer1 }}</td>
+            <td>{{ f.answer2 }}</td>
+            <td>{{ f.answer3 }}</td>
+            <td>{{ f.rating }}</td>
+            <td><button class="btn btn-danger" (click)="deleteFeedBack(f.id)">
+                Delete
+              </button></td>
+           
+            
+          </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+

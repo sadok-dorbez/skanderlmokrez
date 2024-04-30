@@ -1,0 +1,122 @@
+
+
+::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.wrapper {
+    margin-top: 80px;
+    margin-left: 270px;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 150px;
+    
+    position:relative;
+    width: 970px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 3px solid #c1dfdf;
+    box-shadow: 0 0 50px 0 #018495;
+    background-color: #0a032f;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fdf7f7;
+   
+}
+.title{
+    
+    font-size: 35px;
+    color: #eee;
+}
+    
+.inp{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    
+}
+.input {
+    border: none;
+    outline: #515151;
+    background: none;
+    width: 260px;
+    margin-top: 40px;
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+    
+}
+
+
+.banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    background: linear-gradient(to right, #0ef, #c800ff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%,60% 100%);
+    padding-right: 70px; text-align: right;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-end;
+}
+.wel_text{
+    font-size: 40px; 
+    margin-top: -50px; 
+    line-height: 50px;
+}
+.para{
+    margin-top: 10px; 
+    font-size: 18px; 
+    line-height: 24px; 
+    letter-spacing: 1px;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    width: 288px;
+    margin-top: 25px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ef, #c800ff) ;
+}
+.footer{
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+.link{
+    color: #0ef;
+    text-decoration: none;
+}
+
+.message-container {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .success-message {
+    color: rgb(3, 7, 122);
+  }
+  
+  .error-message {
+    color: rgb(201, 15, 15);
+  }
+  

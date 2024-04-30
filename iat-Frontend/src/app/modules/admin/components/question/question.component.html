@@ -1,0 +1,26 @@
+<form class="container mt-5">
+   <div class="form-group">
+       <label for="questionText">Question:</label>
+       <input type="text" [(ngModel)]="question.questionText" name="questionText" id="questionText" class="form-control">
+   </div>
+  
+   <div *ngFor="let response of question.responses; let i = index" class="form-group">
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+              <span class="input-group-text">Response {{i + 1}}:</span>
+          </div>
+          <input type="text" [(ngModel)]="response.responseText" name="responseText{{i}}" id="responseText{{i}}" class="form-control">
+          <div class="input-group-append">
+              <div class="input-group-text">
+                 <input type="checkbox" [(ngModel)]="response.isCorrect" name="isCorrect{{i}}" id="isCorrect{{i}}">
+              </div>
+          </div>
+      </div>
+      <button (click)="removeResponse(i)" class="btn btn-danger">Remove</button>
+   </div>
+  
+   <button type="button" (click)="addResponse()" class="btn btn-primary">Add Response</button>
+   <button type="submit" class="btn btn-success navigate-button" (click)="submitQuestion()">Submit Question</button>
+
+
+</form>

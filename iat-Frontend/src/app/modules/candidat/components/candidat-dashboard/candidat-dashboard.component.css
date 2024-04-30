@@ -1,0 +1,122 @@
+
+.ch{
+  border-radius: 10px;
+  width: auto;
+  color: rgb(14, 14, 14);
+  font-family: Arial, Helvetica, sans-serif;
+  
+  margin-bottom: 15px;
+
+  background-color: #999;
+  position: relative;
+  padding: 5px 10px;
+  background: var(--blue);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  box-shadow: 4px rgba(0, 0, 0, 0.08);
+  padding-bottom: 10px;
+  
+
+}
+
+.h{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #3e3c3c;
+}
+
+
+
+.bt{
+  border-radius: 7px;
+  background-color: rgb(239, 8, 8);
+  
+  margin-left: 900px;
+  padding: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  border: none;
+  position:relative;
+}
+.role{
+  text-align: center;
+  margin-top: 20px;
+}
+.btn{
+  border-radius: 7px;
+  background-color: rgb(239, 8, 8);
+  margin-top: 5px;
+  
+  padding: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+}
+.btn1{
+  border-radius: 7px;
+  background-color: rgb(21, 227, 254);
+  margin-top: 5px;
+  margin-right: 4px;
+  
+  padding: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+}
+.btn2{
+  border-radius: 7px;
+  background-color: rgb(21, 227, 254);
+  margin-top: 50px;
+  margin-right: 4px;
+  margin-left: 850px;
+  padding: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+}
+.detail {
+  
+  width: 60%;
+  padding: 20px;
+  display:block;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    margin-left: 300px;
+    margin-bottom: 30px;
+  
+  
+  
+  box-shadow: 0 7px 30px rgba(166, 216, 216, 0.8);
+  border-radius: 20px;
+  
+ 
+
+  /* margin-top: 10px; */
+}
+
+
+
+.action-buttons {
+  text-align:end; /* Pour aligner les boutons au centre */
+}
+
+.action-buttons button {
+  padding: 10px 20px; /* Ajouter un peu d'espace autour du texte */
+  margin: 5px; /* Ajouter un peu d'espace entre les boutons */
+  border: none; /* Supprimer la bordure par défaut */
+  cursor: pointer; /* Afficher un curseur pointer au survol */
+  border-radius: 5px;
+}
+
+.edit-button {
+  background-color: #3498db; /* Couleur de fond pour le bouton Modifier */
+  color: #fff; /* Couleur du texte pour le bouton Modifier */
+}
+
+.delete-button {
+  background-color: #e74c3c; /* Couleur de fond pour le bouton Supprimer */
+  color: #fff; /* Couleur du texte pour le bouton Supprimer */
+}
+

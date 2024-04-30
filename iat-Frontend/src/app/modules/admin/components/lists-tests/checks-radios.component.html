@@ -1,0 +1,64 @@
+<div class="container">
+
+        <div class="card">
+          <h1>Tests List</h1>
+          <hr>
+          <div class="card-body">
+            <div class="right">
+            </div>
+            <hr>
+            <div class="table-responsive">
+              <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+                <thead>
+                  <tr>
+                   
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Duration</th>
+            
+                    <th scope="col" class="text-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container>
+                    <tr *ngFor="let test of tests">
+                     
+                      <td> {{test.title}} </td>
+                      <td> {{test.description}} </td>
+                      <td> {{test.duration}} </td>
+                      
+                      
+                      <td class="text-center">
+                        <button class="delete-button" (click)="deleteTest(test.id)">Delete</button>
+                        <button class="edit-button" (click)="openEditTestDialog(test.id)">Edit</button>
+                        <button class="btn btn-success navigate-button" (click)="navigateToQuestionForm(test.id)">Add Questions</button>
+                      </td>
+                    </tr>
+                  </ng-container>
+                  <ng-template #noCourses>
+                    <tr>
+                      <td colspan="6" class="text-center">No company available</td>
+                    </tr>
+                  </ng-template>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+  
+
+    <div id="testDialog" class="dialog">
+      <div class="dialog-content">
+        <span class="close" (click)="closeTestDialog()">&times;</span>
+        <h2>Edit Form Test</h2>
+
+      <label for="testTitle">Title:</label>
+      <input type="text" id="testTitle" [(ngModel)]="newTest.title" />
+      <label for="testDuration">Duration:</label>
+      <input type="number" id="testDuration" [(ngModel)]="newTest.duration" />
+      <label for="testDescription">Description:</label>
+      <textarea type="text" id="testDescription" [(ngModel)]="newTest.description"></textarea>
+      <button class="action-button" (click)="editTest()">Save Test</button>
+      </div>
+    </div>  

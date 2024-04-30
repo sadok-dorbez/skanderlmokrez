@@ -1,0 +1,17 @@
+<app-navBar></app-navBar>
+<div class="container" *ngIf="sujetDetails">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ sujetDetails.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted"> {{ sujetDetails.department }}</h6>
+          <p class="card-text"> {{ sujetDetails.description }}</p>
+          <p class="card-text"> {{ sujetDetails.technologies }}</p>
+          <p class="card-text"> {{ sujetDetails.nombre }} stagiaires</p>
+          <p class="card-text"> {{ sujetDetails.criteres }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

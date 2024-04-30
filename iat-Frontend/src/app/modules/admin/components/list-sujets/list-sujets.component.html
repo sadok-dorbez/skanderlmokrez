@@ -1,0 +1,174 @@
+<!-- =============== Navigation ================ -->
+<div class="container">
+  <div class="navigation">
+    <ul>
+      <li>
+        <a href="#">
+
+          <span class="title">IAT Stages</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/dashboard">
+
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/users">
+
+          <span class="title">Users</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/sujets">
+
+          <span class="title">Sujets</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/candidatures">
+
+
+          <span class="title">Candidatures</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/test">
+
+          <span class="title">Tests</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/calendars">
+
+          <span class="title">Meetings list</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+                    <span class="icon">
+
+                    </span>
+          <span class="title">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- ========================= Main ==================== -->
+  <div class="main">
+    <div class="topbar">
+      <div class="toggle">
+
+      </div>
+
+      <div class="search">
+        <label>
+          <input type="text" placeholder="Search here">
+
+        </label>
+      </div>
+
+      <div class="user">
+        <img src="assets/imgs/customer01.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- ======================= Cards ================== -->
+    <div class="cardBox">
+      <div class="card">
+        <div>
+          <div class="numbers">1,504</div>
+          <div class="cardName">Daily Views</div>
+        </div>
+
+
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="numbers">80</div>
+          <div class="cardName">Sales</div>
+        </div>
+
+
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="numbers">284</div>
+          <div class="cardName">Comments</div>
+        </div>
+
+
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="numbers">$7,842</div>
+          <div class="cardName">Earning</div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <button class="btn btn-round btn-lg btn-success" routerLink="/admin/addsujet">Add new sujet</button>
+      </div>
+      <div class="row">
+        <div class="col">
+          <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Criteres</th>
+              <th scope="col">Technologies</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Department</th>
+              <th scope="col">Creation Date</th>
+              <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let s of sujets">
+              <th scope="row">{{ s.id }}</th>
+              <td>{{ s.title }}</td>
+              <td>{{ s.description }}</td>
+              <td>{{ s.criteres }}</td>
+              <td>{{ s.technologies }}</td>
+              <td>{{ s.startDate }}</td>
+              <td>{{ s.endDate }}</td>
+              <td>{{ s.nombre }}</td>
+              <td>{{ s.department }}</td>
+              <td>{{ s.creationDate }}</td>
+              <td>
+                <button class="btn btn-primary mr-2" (click)="editSujet(s.id)">
+                  Edit
+                </button>
+                <button class="btn btn-danger" (click)="deleteSujet(s.id)">
+                  Delete
+                </button>
+                <button class="btn btn-warning" [routerLink]="['/add-test', s.id]">Add test</button>
+
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

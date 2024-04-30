@@ -1,0 +1,20 @@
+<app-navBar></app-navBar>
+<br><br><div class="container" >
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card mt-5" *ngIf="result">
+          <div class="card-body" style="background-color: rgb(184, 140, 224);">
+            <h4 class="card-title text-center">Your Result</h4>
+            <p class="card-text text-center">{{ result }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br><br>
+<mwl-calendar-month-view
+ [viewDate]="viewDate"
+ (dayClicked)="dayClicked({ date: $event.day.date })"
+></mwl-calendar-month-view>
+
+

@@ -1,0 +1,43 @@
+<app-navBar></app-navBar>
+<br>
+<div class="container feedback-container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="text-center">Your Feedback matters!</h1>
+      <form (ngSubmit)="onSubmit(feedbackForm)" #feedbackForm="ngForm"> 
+        <div class="form-group">
+            <div class="rating">
+              <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="feedback.rating">
+              <label for="star1" class="fas fa-sad-tear"></label>
+              <input type="radio" id="star2" name="rating" value="2" [(ngModel)]="feedback.rating">
+              <label for="star2" class="fas fa-meh"></label>
+              <input type="radio" id="star3" name="rating" value="3" [(ngModel)]="feedback.rating">
+              <label for="star3" class="fas fa-smile"></label>
+              <input type="radio" id="star4" name="rating" value="4" [(ngModel)]="feedback.rating">
+              <label for="star4" class="fas fa-grin-alt"></label>
+              <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="feedback.rating">
+              <label for="star5" class="fa fa-laugh-wink"></label>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="question1">Question 1</label>
+          <input type="text" id="question1" name="answer1" [(ngModel)]="feedback.answer1" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="question2">Question 2</label>
+          <input type="text" id="question2" name="answer2" [(ngModel)]="feedback.answer2" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="question3">Question 3</label>
+          <input type="text" id="question3" name="answer3" [(ngModel)]="feedback.answer3" class="form-control" required>
+        </div>
+        
+          
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="image-container">
+    <img src="../../../../../assets/feedback.png" alt="Image">
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <div class="card card-container">
+    <h2 class="text-center">Add User</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" formControlName="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password" required>
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select class="form-control" id="role" formControlName="role" required>
+          <option *ngFor="let role of roles" [value]="role">{{role.name}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-add-user" [disabled]="!signupForm.valid">Add User</button>
+      <p class="text-center text-danger" *ngIf="message">{{message}}</p>
+    </form>
+  </div>
+</div>

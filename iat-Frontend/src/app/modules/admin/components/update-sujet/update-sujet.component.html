@@ -1,0 +1,32 @@
+<div class="back"></div>
+<form action="" class="form" [formGroup]="updateForm">
+  <div class="postulation">
+    <div class="content">
+      <h2>Postulation pour un sujet de PFE</h2>
+      <div class="input">
+        <input type="text" class="input-field" autocomplete="off" required formControlName="title">
+        <label for="input">Titre du sujet</label>
+      </div>
+      <div class="input">
+        <input type="text" class="input-field" autocomplete="off" required formControlName="criteres">
+        <label for="input">Critères de sélection</label>
+      </div>
+      <div class="input">
+        <!-- Correction ici: ajout de formControlName après la balise de fermeture textarea -->
+        <textarea class="input-field" rows="5" required formControlName="description"></textarea>
+        <label for="input">Description détaillée du sujet</label>
+      </div>
+      <div class="input">
+        <input type="text" class="input-field" autocomplete="off" required formControlName="duree">
+        <label for="input">Durée estimée du projet</label>
+      </div>
+      <div class="input">
+        <input type="text" class="input-field" autocomplete="off" required formControlName="nombre">
+        <label for="input">Nombre des stagiaires</label>
+      </div>
+      <div class="input">
+        <input type="submit" class="button" value="Update" (click)="updateSujet()" >
+      </div>
+    </div>
+  </div>
+</form>

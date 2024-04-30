@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <h1>Calendars List</h1>
+          <hr>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">User Id</th>
+                    <th scope="col">Selected Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <ng-container *ngIf="calendars && calendars.length > 0; else noCalendars">
+                    <tr *ngFor="let calendar of calendars">
+                      <td> {{calendar.userId}} </td>
+                      <td> {{calendar.selectedDate | date:'shortDate'}} </td>
+                      <td>
+                        <span class="badge" [ngClass]="{'badge-success': calendar.status === 'APPROVED', 'badge-danger': calendar.status === 'REJECTED'}">
+                          {{calendar.status}}
+                        </span>
+                      </td>
+                      <td class="text-center">
+                        <button class="btn btn-warning"
+                                (click)="changeStatus(calendar.id, calendar.status === Status.APPROVED ? Status.REJECTED : Status.APPROVED)">
+                          Change Status
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </td>
+                      
+                      
+                      
+                    </tr>
+                  </ng-container>
+                  <ng-template #noCalendars>
+                    <tr>
+                      <td colspan="3" class="text-center">No calendars available</td>
+                    </tr>
+                  </ng-template>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  

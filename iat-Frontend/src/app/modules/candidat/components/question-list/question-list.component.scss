@@ -1,0 +1,34 @@
+.timer-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: color 0.3s ease-in-out;
+}
+
+.card-container {
+  max-width: 80%;
+  width: 100%;
+  margin: 40px auto 0;
+}
+
+.card {
+  position: relative;
+}
+
+#timer.last-5-seconds {
+  color: red;
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0%, 100% {
+    color: red;
+  }
+  50% {
+    color: white;
+  }
+}

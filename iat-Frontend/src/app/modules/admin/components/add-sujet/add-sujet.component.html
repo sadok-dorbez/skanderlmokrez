@@ -1,0 +1,170 @@
+<!-- =============== Navigation ================ -->
+<div class="container">
+  <div class="navigation">
+    <ul>
+      <li>
+        <a href="#">
+
+          <span class="title">IAT Stages</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/dashboard">
+
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/users">
+
+          <span class="title">Users</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/sujets">
+
+          <span class="title">Sujets</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/admin/candidatures">
+
+
+          <span class="title">Candidatures</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+
+          <span class="title">Feedbacks</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+
+          <span class="title">Password</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+                    <span class="icon">
+
+                    </span>
+          <span class="title">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ========================= Main ==================== -->
+  <div class="main">
+    <div class="topbar">
+      <div class="toggle">
+
+      </div>
+
+      <div class="search">
+        <label>
+          <input type="text" placeholder="Search here">
+
+        </label>
+      </div>
+
+      <div class="user">
+        <img src="assets/imgs/customer01.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- ======================= Cards ================== -->
+    <div class="cardBox">
+      <div class="card">
+        <div>
+          <div class="numbers">1,504</div>
+          <div class="cardName">Daily Views</div>
+        </div>
+
+
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="numbers">80</div>
+          <div class="cardName">Sales</div>
+        </div>
+
+
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="numbers">284</div>
+          <div class="cardName">Comments</div>
+        </div>
+
+
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="numbers">$7,842</div>
+          <div class="cardName">Earning</div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+<form (ngSubmit)="addSujet()">
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" [(ngModel)]="sujet.title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" [(ngModel)]="sujet.description" name="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="criteres">Criteres</label>
+    <input type="text" class="form-control" id="criteres" [(ngModel)]="sujet.criteres" name="criteres">
+  </div>
+  <div class="form-group">
+    <label for="technologies">Technologies</label>
+    <input type="text" class="form-control" id="technologies" [(ngModel)]="sujet.technologies" name="technologies">
+  </div>
+  <div class="form-group">
+    <label for="startDate">Start Date</label>
+    <input type="date" class="form-control" id="startDate" [(ngModel)]="sujet.startDate" name="startDate">
+  </div>
+  <div class="form-group">
+    <label for="endDate">End Date</label>
+    <input type="date" class="form-control" id="endDate" [(ngModel)]="sujet.endDate" name="endDate">
+  </div>
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="number" class="form-control" id="nombre" [(ngModel)]="sujet.nombre" name="nombre">
+  </div>
+  <div class="form-group">
+    <label for="department">Department</label>
+    <select class="form-control" id="department" [(ngModel)]="sujet.department" name="department">
+      <option value="DeveloppementWeb">DeveloppementWeb</option>
+      <option value="DeveloppementMobile">DeveloppementMobile</option>
+      <option value="SystemEmbarque">SystemEmbarque</option>
+      <option value="Telecome">Telecome</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>

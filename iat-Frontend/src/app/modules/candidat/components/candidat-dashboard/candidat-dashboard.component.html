@@ -1,0 +1,40 @@
+<app-navBar></app-navBar>
+<div class="container" >
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card mt-5" *ngIf="result">
+        <div class="card-body" style="background-color: rgb(184, 140, 224);">
+          <h4 class="card-title text-center">Your Result</h4>
+          <p class="card-text text-center">{{ result }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br>
+<div class="detail" style="margin-top:10px;" *ngFor="let sujet of sujets">
+  <div class="ch">
+
+    <div class="ch">
+      <h2 style="cursor: pointer; color: #108ee9;"> {{sujet.title}} </h2>
+      <hr>
+      <h4 class="h">Description :</h4>
+      <h4><b>{{sujet.description}}</b></h4><br>
+      <h5 class="h">Departement:</h5>
+      <h5><b> {{sujet.department}}</b></h5><br>
+      <h5 class="h">Technologies:</h5>
+      <h5><b> {{sujet.technologies}}</b></h5><br>
+      <h5 class="h">Criteteres:</h5>
+      <h5><b> {{sujet.criteres}}</b></h5><br>
+      <h5>Durée :
+        <td>
+          Start : {{sujet.startDate }}
+          End : {{sujet.endDate  }}
+        </td>
+      </h5>
+      <br> <h5 >Nombres de stagiaires :<b>{{sujet.nombre}}</b></h5>
+
+      <button [routerLink]="['/candidat/postuler', sujet.id]" class="btn btn-primary">Postuler</button>
+
+    </div>
+  </div>
+</div>
